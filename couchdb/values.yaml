@@ -148,6 +148,9 @@ erlangFlags:
   name: couchdb
   setcookie: monster
 
+## JWT additional auths, [{rsa: certificate}] format
+jwtAuths: []
+
 ## couchdbConfig will override default CouchDB configuration settings.
 ## The contents of this map are reformatted into a .ini file laid down
 ## by a ConfigMap object.

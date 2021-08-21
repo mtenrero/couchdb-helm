@@ -21,3 +21,9 @@ data:
   seedlistinifile: |
     [cluster]
     seedlist = {{ template "couchdb.seedlist" . }}
+  
+  jwtauths: |
+    [jwt_keys]
+    {{ range .Values.jwtAuths -}}
+    {{ .rsa }} = {{ .cert | quote }}
+    {{ end }}
